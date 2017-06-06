@@ -15,14 +15,17 @@ gcloud auth application-default login
 #### Examples
 
 ```
-# output validation then exit
-./bin/gclouder -c conf/<config>.yaml --validate-only
-
-# only execute non-state-changing commands (e.g: queries)
-./bin/gclouder -c conf/<config>.yaml --dry-run
+# only execute non-state-changing commands (i.e: API queries)
+gclouder -c config.yaml --dry-run
 
 # apply the config
-./bin/gclouder -c conf/<config>.yaml
+gclouder -c config.yaml
+
+# apply the config, also outputting the commands that are run and their output
+gclouder -c config.yaml --debug
+
+# apply the config and include stack trace on error
+gclouder -c config.yaml --trace
 ```
 
 ### Install
