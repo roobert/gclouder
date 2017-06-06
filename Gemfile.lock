@@ -1,3 +1,15 @@
+PATH
+  remote: .
+  specs:
+    gclouder (0.1.1)
+      awesome_print
+      colorize
+      hashie
+      logging
+      netaddr
+      nokogiri
+      trollop
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -72,20 +84,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_print
-  colorize
+  gclouder!
   guard
   guard-rspec
-  hashie
-  logging
-  netaddr
-  nokogiri
   rake
   rspec
-  trollop
-
-RUBY VERSION
-   ruby 2.4.0p0
 
 BUNDLED WITH
    1.15.1
