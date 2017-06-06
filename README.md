@@ -32,12 +32,6 @@ gclouder -c config.yaml --trace
 
 Installation instructions: gem, or from source
 
-#### Gem
-
-```
-gem install gclouder
-```
-
 #### Source
 ##### Dependencies
 
@@ -58,13 +52,23 @@ rbenv install 2.4.0
 rbenv global 2.4.0 # or `rbenv local 2.4.0` in gclouder dir
 ```
 
-###### Gems
+##### Gem
 
-Install `gclouder` gem dependencies:
+Normal installation:
+
+```
+gem install gclouder
+```
+
+##### Local Source
+
+To install dependencies and run gclouder from source:
+
 ```
 cd gclouder
 gem install bundler
 bundle install
+./bin/gclouder --help
 ```
 
 ### Testing
