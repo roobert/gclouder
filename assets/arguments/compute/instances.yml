@@ -1,0 +1,92 @@
+---
+no_boot_disk_auto_delete:
+  type: Boolean
+  required: false
+boot_disk_device_name:
+  type: String
+  required: false
+boot_disk_size:
+  type: String
+  required: false
+boot_disk_type:
+  type: String
+  required: false
+can_ip_forward:
+  type: Boolean
+  required: false
+csek_key_file:
+  type: String
+  required: false
+custom_cpu:
+  type: String
+  required: false
+custom_memory:
+  type: String
+  required: false
+description:
+  type: String
+  required: false
+disk:
+  type: Array
+  required: false
+image:
+  type: String
+  required: false
+image_family:
+  type: String
+  required: false
+image_project:
+  type: String
+  required: false
+local_ssd:
+  type: Array
+  required: false
+machine_type:
+  type: String
+  required: false
+maintenance_policy:
+  type: String
+  required: false
+metadata:
+  type: Array
+  required: false
+metadata_from_file:
+  type: Array
+  required: false
+network:
+  type: String
+  required: false
+  default: default
+subnet:
+  type: String
+  required: false
+address:
+  type: String
+  required: false
+no_address:
+  type: Boolean
+  required: false
+preemptible:
+  type: Boolean
+  required: false
+private_network_ip:
+  type: String
+  required: false
+no_require_csek_key_create:
+  type: Boolean
+  required: false
+no_restart_on_failure:
+  type: Boolean
+  required: false
+no_scopes:
+  type: Boolean
+  required: false
+scopes:
+  type: Array
+  required: false
+tags:
+  type: Array
+  required: false
+zone:
+  type: String
+  required: false

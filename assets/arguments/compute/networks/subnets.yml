@@ -1,0 +1,13 @@
+---
+network:
+  type: String
+  required: true
+range:
+  type: String
+  required: true
+description:
+  type: String
+  required: false
+region:
+  type: String
+  required: false

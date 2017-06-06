@@ -1,0 +1,14 @@
+---
+allowed:
+  ip_protocol: String
+  ports: Array
+creation_timestamp: OutputOnly
+description: String
+id: OutputOnly
+kind: String
+name: String
+network: String
+self_link: OutputOnly
+source_ranges: Array
+source_tags: Array
+target_tags: Array

@@ -1,0 +1,11 @@
+---
+ipv4_range: String
+auto_create_subnetworks: Boolean
+creation_timestamp: OutputOnly
+description: String
+gateway_ipv4: String
+id: OutputOnly
+kind: OutputOnly
+name: String
+self_link: OutputOnly
+subnetworks: OutputOnly

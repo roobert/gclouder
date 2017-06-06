@@ -1,0 +1,26 @@
+---
+cluster:
+  type: String
+  required: false
+disk_size:
+  type: String
+  required: false
+no_enable_cloud_endpoints:
+  type: Boolean
+  required: false
+image_type:
+  type: String
+  required: false
+machine_type:
+  type: String
+  required: false
+num_nodes:
+  type: String
+  required: false
+  default: 3
+scopes:
+  type: Array
+  required: false
+zone:
+  type: String
+  required: false

@@ -1,0 +1,18 @@
+---
+creation_timestamp: OutputOnly
+description: String
+detailed_status: OutputOnly
+id: OutputOnly
+ike_version: Integer
+kind: OutputOnly
+local_traffic_selector: Array
+name: String
+peer_ip: String
+region: OutputOnly
+remote_traffic_selector: Array
+router: String
+self_link: OutputOnly
+shared_secret: String
+shared_secret_hash: String
+status: OutputOnly
+target_vpn_gateway: String

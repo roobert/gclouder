@@ -1,0 +1,10 @@
+---
+description:
+  type: String
+  required: false
+mode:
+  type: String
+  required: false
+range:
+  type: String
+  required: false

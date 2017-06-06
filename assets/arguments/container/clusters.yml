@@ -1,0 +1,60 @@
+---
+additional_zones:
+  type: Array
+  required: false
+async:
+  type: Boolean
+  required: false
+cluster_ipv4_cidr:
+  type: String
+  required: false
+disable_addons:
+  type: Array
+  required: false
+disk_size:
+  type: String
+  required: false
+no_enable_cloud_endpoints:
+  type: Boolean
+  required: false
+no_enable_cloud_logging:
+  type: Boolean
+  required: false
+no_enable_cloud_monitoring:
+  type: Boolean
+  required: false
+image_type:
+  type: String
+  required: false
+machine_type:
+  type: String
+  required: false
+max_nodes_per_pool:
+  type: String
+  required: false
+network:
+  type: String
+  required: false
+num_nodes:
+  type: String
+  required: false
+  default: 3
+password:
+  type: String
+  required: false
+scopes:
+  type: Array
+  required: false
+subnetwork:
+  type: String
+  required: false
+username:
+  type: String
+  required: false
+  default: admin
+wait:
+  type: Boolean
+  required: false
+zone:
+  type: String
+  required: false

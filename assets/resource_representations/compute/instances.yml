@@ -1,0 +1,62 @@
+---
+can_ip_forward: Boolean
+cpu_platform: OutputOnly
+creation_timestamp: OutputOnly
+description: String
+disks:
+  auto_delete: Boolean
+  boot: Boolean
+  device_name: String
+  disk_encryption_key:
+    raw_key: String
+    sha256: String
+  index: Integer
+  initialize_params:
+    disk_name: String
+    disk_size_gb: Integer
+    disk_type: String
+    source_image: String
+    source_image_encryption_key:
+      raw_key: String
+      sha256: String
+  interface: String
+  kind: OutputOnly
+  licenses: OutputOnly
+  mode: String
+  source: String
+  type: String
+id: OutputOnly
+kind: OutputOnly
+machine_type: String
+metadata:
+  fingerprint: String
+  items:
+    key: String
+    value: String
+  kind: OutputOnly
+name: String
+network_interfaces:
+  access_configs:
+    kind: OutputOnly
+    name: String
+    nat_ip: String
+    type: String
+  kind: OutputOnly
+  name: OutputOnly
+  network: String
+  network_ip: String
+  subnetwork: String
+scheduling:
+  automatic_restart: Boolean
+  on_host_maintenance: String
+  preemptible: Boolean
+self_link: OutputOnly
+service_accounts:
+  email: String
+  scopes: Array
+status: OutputOnly
+status_message: OutputOnly
+tags:
+  fingerprint: String
+  items: Array
+zone: OutputOnly

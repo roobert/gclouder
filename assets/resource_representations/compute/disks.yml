@@ -1,0 +1,29 @@
+---
+creation_timestamp: OutputOnly
+description: String
+disk_encryption_key:
+  raw_key: String
+  sha256: String
+id: OutputOnly
+kind: OutputOnly
+last_attach_timestamp: OutputOnly
+last_detach_timestamp: OutputOnly
+licenses: Array
+name: String
+options: String
+self_link: OutputOnly
+size_gb: Integer
+source_image: String
+source_image_encryption_key:
+  raw_key: String
+  sha256: String
+source_image_id: OutputOnly
+source_snapshot: String
+source_snapshot_encryption_key:
+  raw_key: String
+  sha256: String
+source_snapshot_id: OutputOnly
+status: OutputOnly
+type: String
+users: OutputOnly
+zone: OutputOnly

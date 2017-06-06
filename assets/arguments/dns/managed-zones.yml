@@ -1,0 +1,7 @@
+---
+description:
+  type: String
+  required: true
+dns_name:
+  type: String
+  required: true

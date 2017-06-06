@@ -1,0 +1,20 @@
+---
+allow:
+  type: Array
+  required: true
+description:
+  type: String
+  required: false
+network:
+  type: String
+  required: false
+  default: default
+source_ranges:
+  type: Array
+  required: false
+source_tags:
+  type: Array
+  required: false
+target_tags:
+  type: Array
+  required: false

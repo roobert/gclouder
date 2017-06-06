@@ -1,0 +1,7 @@
+---
+name:
+  type: String
+  required: true
+zone:
+  type: Array
+  required: true

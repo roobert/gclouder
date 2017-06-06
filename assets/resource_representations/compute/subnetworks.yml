@@ -1,0 +1,11 @@
+---
+creation_timestamp: OutputOnly
+description: String
+gateway_address: OutputOnly
+id: OutputOnly
+ip_cidr_range: String
+kind: OutputOnly
+name: String
+network: String
+region: String
+self_link: OutputOnly

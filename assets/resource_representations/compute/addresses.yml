@@ -1,0 +1,11 @@
+---
+address: String
+creation_timestamp: OutputOnly
+description: String
+id: OutputOnly
+kind: OutputOnly
+name: String
+region: OutputOnly
+self_link: OutputOnly
+status: OutputOnly
+users: OutputOnly

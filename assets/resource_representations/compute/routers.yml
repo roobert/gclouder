@@ -1,0 +1,22 @@
+---
+bgp:
+  asn: unsigned integer
+bgp_peers:
+  advertised_route_priority: unsigned integer
+  interface_name: String
+  ip_address: String
+  name: String
+  peer_asn: unsigned integer
+  peer_ip_address: String
+creation_timestamp: OutputOnly
+description: String
+id: OutputOnly
+interfaces:
+  ip_range: String
+  linked_vpn_tunnel: String
+  name: String
+kind: OutputOnly
+name: String
+network: String
+region: OutputOnly
+self_link: OutputOnly

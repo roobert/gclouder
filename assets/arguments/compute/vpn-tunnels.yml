@@ -1,0 +1,25 @@
+---
+peer_address:
+  type: String
+  required: true
+target_vpn_gateway:
+  type: String
+  required: true
+description:
+  type: String
+  required: false
+ike_version:
+  type: String
+  required: false
+local_traffic_selector:
+  type: Array
+  required: false
+region:
+  type: String
+  required: false
+remote_traffic_selector:
+  type: Array
+  required: false
+router:
+  type: String
+  required: false

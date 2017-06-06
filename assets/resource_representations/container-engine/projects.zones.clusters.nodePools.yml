@@ -1,0 +1,11 @@
+---
+name: String
+config: Object
+initial_node_count: Integer
+self_link: String
+version: String
+instance_group_urls: String
+status: Array
+status_message: String
+autoscaling: Object
+management: Object

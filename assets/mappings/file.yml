@@ -1,0 +1,31 @@
+compute::networks::subnets:
+  - compute
+  - subnetworks
+
+compute::firewall-rules:
+  - compute
+  - firewalls
+
+compute::vpn-tunnels:
+  - compute
+  - vpnTunnels
+
+compute::target-vpn-gateways:
+  - compute
+  - vpnTunnels
+
+container::clusters:
+  - container-engine
+  - projects.zones.clusters
+
+container::node-pools:
+  - container-engine
+  - projects.zones.clusters.nodePools
+
+beta::pubsub::subscriptions:
+  - pubsub
+  - projects.subscriptions
+
+beta::pubsub::topics:
+  - pubsub
+  - projects.topics

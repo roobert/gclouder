@@ -1,0 +1,15 @@
+compute::networks::subnets:
+  range:
+    - ip_cidr_range
+
+compute::instances:
+  subnet:
+    - compute
+    - instances
+    - network_interfaces
+    - 0
+    - subnetwork
+
+compute::disks:
+  size:
+    - size_gb

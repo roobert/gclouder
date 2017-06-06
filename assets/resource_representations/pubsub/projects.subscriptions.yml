@@ -1,0 +1,5 @@
+---
+name: String
+topic: String
+push_config: Object
+ack_deadline_seconds: Integer
