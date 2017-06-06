@@ -25,13 +25,24 @@ gcloud auth application-default login
 ./bin/gclouder -c conf/<config>.yaml
 ```
 
-#### Dependencies
+### Install
 
-##### Google Cloud SDK
+Installation instructions: gem, or from source
+
+#### Gem
+
+```
+gem install gclouder
+```
+
+#### Source
+##### Dependencies
+
+###### Google Cloud SDK
 
 Please see: https://cloud.google.com/sdk/downloads
 
-##### Ruby
+###### Ruby
 
 Requires a modern version of Ruby (>= 2.4), you can use rbenv or brew to install one, e.g:
 
@@ -44,7 +55,7 @@ rbenv install 2.4.0
 rbenv global 2.4.0 # or `rbenv local 2.4.0` in gclouder dir
 ```
 
-##### Gems
+###### Gems
 
 Install `gclouder` gem dependencies:
 ```
