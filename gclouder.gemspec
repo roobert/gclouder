@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.license                    = "MIT"
 
-  spec.files                      = Dir["lib/**/*.rb", "assets", "bin/gclouder", "*.md"]
+  spec.files                      = Dir["lib/**/*.rb", "assets/**/*", "bin/gclouder", "*.md"]
   spec.executables                = ["gclouder"]
   spec.require_paths              = ["lib"]
 
