@@ -32,14 +32,13 @@ gclouder -c config.yaml --trace
 
 Installation instructions: gem, or from source
 
-#### Source
-##### Dependencies
+#### Dependencies
 
-###### Google Cloud SDK
+##### Google Cloud SDK
 
 Please see: https://cloud.google.com/sdk/downloads
 
-###### Ruby
+##### Ruby
 
 Requires a modern version of Ruby (>= 2.4), you can use rbenv or brew to install one, e.g:
 
@@ -52,7 +51,8 @@ rbenv install 2.4.0
 rbenv global 2.4.0 # or `rbenv local 2.4.0` in gclouder dir
 ```
 
-##### Gem
+#### Gem Install
+##### RubyGems
 
 Normal installation:
 
@@ -65,7 +65,6 @@ gem install gclouder
 To install dependencies and run gclouder from source:
 
 ```
-cd gclouder
 gem install bundler
 bundle install
 ./bin/gclouder --help
