@@ -80,11 +80,9 @@ module GClouder
 
           next if skip
 
-          YAML.load_file("assets/mappings/file.yml")
-
           # FIXME: this is so keys with partial matches work..
           file_mapping_key = path.join("::")
-          file_mapping = YAML.load_file("assets/mappings/file.yml").fetch(file_mapping_key, nil)
+          file_mapping = YAML.load_file(File.join(File.dirname(__FILE__), "../../assets/mappings/file.yml")).fetch(file_mapping_key, nil)
 
           resource_representation_path = file_mapping.nil? ? path : file_mapping
 
@@ -98,7 +96,7 @@ module GClouder
           # FIXME: partial key matches here are bad.. i.e: [compute, networks]  matches [compute, networks, subnetworks]
           # maps remote property names back to arguments
           property_mappings_key = path.join("::")
-          property_mappings = YAML.load_file("assets/mappings/property.yml").fetch(property_mappings_key, [])
+          property_mappings = YAML.load_file(File.join(File.dirname(__FILE__), "../../assets/mappings/property.yml")).fetch(property_mappings_key, [])
 
           # Assume global, unless we can find or infer a region...
           region = "global"
