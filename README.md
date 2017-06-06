@@ -30,8 +30,6 @@ gclouder -c config.yaml --trace
 
 ### Install
 
-Installation instructions: gem, or from source
-
 #### Dependencies
 
 ##### Google Cloud SDK
@@ -52,6 +50,9 @@ rbenv global 2.4.0 # or `rbenv local 2.4.0` in gclouder dir
 ```
 
 #### Gem Install
+
+Pick one of the following two methods.
+
 ##### RubyGems
 
 Normal installation:
