@@ -13,13 +13,15 @@ module GClouder
 
     def self.resource?(resource, name, args = nil, filter_key: "name", filter: "#{filter_key} ~ ^#{name}$", project_id: nil, silent: false, extra_info: nil, indent: 3)
       exists = \
-        gcloud("#{resource} list --filter '#{filter}' #{args} | jq '. | length'", force: true, silent: silent, project_id: project_id)
+        gcloud("#{resource} list --filter '#{filter}' #{args} | jq '. | length'", force: true, project_id: project_id) > 0
 
-      # if silent is specified then shell call returns truthy, otherwise integer
-      exists = exists > 0 ? true : false if !silent
+      # if silent is specified then shell call returns boolean, otherwise integer
+      if exists.is_a?(Integer)
+        exists = exists > 0 ? true : false
+      end
 
       if exists
-        feedback("good", resource, name, extra_info: extra_info, indent: indent, silent: silent)
+        feedback("good", resource, name, extra_info: extra_info, indent: indent, silent: silent) unless silent
         return true
       end
 

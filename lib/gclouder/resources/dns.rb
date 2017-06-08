@@ -269,8 +269,9 @@ module GClouder
           true
         end
 
+        # FIXME: if a record exists but ttl or ip are different, an update should be performed
         def self.add_record_set(name, value, zone, type, ttl, project_id)
-          if Resource.resource?("dns record-sets", name, "--zone=#{zone}", filter: "name = #{name} AND type = #{type}", project_id: project_id, silent: true)
+          if record_exists?(project_id, zone, name, type)
             good "#{name} IN #{type} #{value} #{ttl}", indent: 4
             return
           end
@@ -278,6 +279,10 @@ module GClouder
           add "#{name} IN #{type} #{value} #{ttl}", indent: 4
 
           gcloud "dns record-sets transaction add --name=#{name} --zone=#{zone} --type=#{type} --ttl=#{ttl} #{value}", project_id: project_id
+        end
+
+        def self.record_exists?(project_id, zone, name, type)
+          Resource.resource?("dns record-sets", name, "--zone=#{zone}", filter: "name = #{name} AND type = #{type}", project_id: project_id, silent: true)
         end
 
         def self.lookup_ip(name, context)
