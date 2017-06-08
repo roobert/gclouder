@@ -15,6 +15,9 @@ module GClouder
       exists = \
         gcloud("#{resource} list --filter '#{filter}' #{args} | jq '. | length'", force: true, silent: silent, project_id: project_id)
 
+      # if silent is specified then shell call returns truthy, otherwise integer
+      exists = exists > 0 ? true : false if !silent
+
       if exists
         feedback("good", resource, name, extra_info: extra_info, indent: indent, silent: silent)
         return true
