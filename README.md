@@ -119,7 +119,6 @@ To build and install a gem run:
 ```
 rake build
 gem install pkg/gclouder-<version>.gem
-gem push pkg/gclouder-<version>.gem
 ```
 
 To perform a release
