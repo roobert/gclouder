@@ -53,7 +53,8 @@ require "gclouder/resources/project_id"
 require "gclouder/resources/project"
 require "gclouder/resources/project/iam_policy_binding.rb"
 
-require "gclouder/resources/storagebuckets"
+require "gclouder/resources/storage/buckets"
+require "gclouder/resources/storage/notifications"
 
 require "gclouder/resources/compute/networks"
 require "gclouder/resources/compute/networks/subnets"
@@ -161,8 +162,14 @@ module GClouder
 
       {
         name: "storage-buckets",
-        module: Resources::StorageBuckets,
+        module: Resources::Storage::Buckets,
         skip: [ :check ],
+      },
+
+      {
+        name: "storage-notifications",
+        module: Resources::Storage::Notifications,
+        skip: [ :check, :clean ],
       },
 
       {
