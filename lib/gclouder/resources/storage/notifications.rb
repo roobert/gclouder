@@ -41,7 +41,8 @@ module GClouder
             permitted_and_required_keys = {
               "bucket"=>{"type"=>"String", "required"=>true},
               "topic"=>{"type"=>"String", "required"=>true},
-              "events"=>{"type"=>"Array", "required"=>false}
+              "events"=>{"type"=>"Array", "required"=>false},
+              "prefix"=>{"type"=>"String", "required"=>false}
             }
 
             Resources::Validate::Region.instances(
@@ -80,8 +81,12 @@ module GClouder
             if notification.has_key?("events")
               event_type_args = "-e #{notification["events"].join(",")}"
             end
+            prefix_arg = ""
+            if notification.has_key?("prefix")
+              prefix_arg = "-p #{notification["prefix"]}"
+            end
 
-            args = "-t #{notification["name"]} #{event_type_args} -f json gs://#{notification["bucket"]}"
+            args = "-t #{notification["name"]} #{prefix_arg} #{event_type_args} -f json gs://#{notification["bucket"]}"
 
             add "notification topic: #{notification["name"]}; bucket: #{notification["bucket"]}", indent: 4
             gsutil "notification create", args
