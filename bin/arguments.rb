@@ -58,6 +58,7 @@ module GClouder
           %w(beta pubsub topics create),
           %w(beta pubsub subscriptions create),
           %w(beta logging sinks create),
+          %w(beta functions deploy)
         ]
       end
 

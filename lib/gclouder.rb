@@ -79,6 +79,8 @@ require "gclouder/resources/pubsub/subscriptions"
 
 require "gclouder/resources/logging/sinks"
 
+require "gclouder/resources/functions/function"
+
 module GClouder
   include GClouder::Logging
   include GClouder::Config::CLIArgs
@@ -245,6 +247,12 @@ module GClouder
         name: "subscriptions",
         module: Resources::PubSub::Subscriptions,
         skip: [ :check ],
+      },
+
+      {
+        name: "functions",
+        module: Resources::Functions::Function,
+        skip: [ :check, :clean ],
       },
     ]
   end
