@@ -1,0 +1,30 @@
+---
+name:
+  type: String
+  required: true
+stage_bucket:
+  type: String
+trigger_topic:
+  type: String
+trigger_http:
+  type: Boolean
+local_path:
+  type: String
+source_url:
+  type: String
+source_path:
+  type: String
+source_branch:
+  type: String
+source_tag:
+  type: String
+source_revision:
+  type: String
+memory:
+  type: String
+timeout:
+  type: String
+include_ignored_files:
+  type: String
+entry-point:
+  type: String

@@ -11,7 +11,7 @@ module GClouder
       send action, "#{name} #{extra_info}", indent: indent
     end
 
-    def self.resource?(resource, name, args = nil, filter_key: "name", filter: "#{filter_key} ~ ^#{name}$", project_id: nil, silent: false, extra_info: nil, indent: 3)
+    def self.resource?(resource, name, args = nil, filter_key: "name", filter_value: nil, filter: "#{filter_key} ~ ^#{filter_value || name}$", project_id: nil, silent: false, extra_info: nil, indent: 3)
       exists = \
         gcloud("#{resource} list --filter '#{filter}' #{args} | jq '. | length'", force: true, project_id: project_id) > 0
 
