@@ -11,7 +11,7 @@ module GClouder
     end
 
     def gsutil(command, args, force: false)
-      info "# gsutil #{command} -p #{project['project_id']} #{args}" if cli_args[:debug]
+      info "# gsutil #{command} #{args}" if cli_args[:debug]
 
       return if cli_args[:dry_run] && !force
 
@@ -19,7 +19,7 @@ module GClouder
     end
 
     def gsutil_exec(command, args)
-      shell("gsutil #{command} -p #{project['project_id']} #{args}")
+      shell("gsutil #{command} #{args}")
     end
   end
 end

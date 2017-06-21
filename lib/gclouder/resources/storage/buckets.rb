@@ -7,6 +7,7 @@ module GClouder
         include GClouder::Logging
         include GClouder::Shell
         include GClouder::Resource::Cleaner
+        include GClouder::Config::Project
 
         def self.header(stage = :ensure)
           info "[#{stage}] storage / buckets", title: true, indent: 1
@@ -78,8 +79,7 @@ module GClouder
 
             return if cli_args[:dry_run]
 
-            # Just use shell, as -p flag is not valid for 'defacl ch'.
-            shell("gsutil defacl ch -u #{default_access} gs://#{bucket_name}")
+            gsutil "defacl ch", "-u #{default_access} gs://#{bucket_name}"
           end
 
           def self.check_exists?(region, bucket_name)
@@ -93,8 +93,7 @@ module GClouder
             end
 
             add "#{bucket["name"]} [#{bucket["default_access"]}]"
-            gsutil "mb", "-l #{region} gs://#{bucket["name"]}"
-
+            gsutil "mb", "-p #{project['project_id']} -l #{region} gs://#{bucket["name"]}"
 
             setDefaultAccess bucket["name"], bucket["default_access"] if bucket.key?("default_access")
           end
